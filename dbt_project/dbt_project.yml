@@ -1,0 +1,12 @@
+
+name: 'supportops_dbt'
+version: '1.0.0'
+profile: 'supportops_dbt'
+model-paths: ['models']
+
+models:
+  supportops_dbt:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table

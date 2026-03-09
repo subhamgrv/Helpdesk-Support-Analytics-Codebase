@@ -1,0 +1,12 @@
+
+pandas==2.2.3
+SQLAlchemy==2.0.36
+psycopg2-binary==2.9.10
+faker==33.1.0
+requests==2.32.3
+python-dotenv==1.0.1
+fastapi==0.115.6
+uvicorn==0.32.1
+openpyxl==3.1.5
+apache-airflow==2.10.4
+dbt-postgres==1.8.2

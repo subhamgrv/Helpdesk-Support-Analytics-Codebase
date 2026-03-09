@@ -1,0 +1,48 @@
+
+version: 2
+
+models:
+  - name: stg_tickets
+    columns:
+      - name: ticket_id
+        tests:
+          - not_null
+          - unique
+
+  - name: stg_agents
+    columns:
+      - name: agent_id
+        tests:
+          - not_null
+          - unique
+
+  - name: stg_departments
+    columns:
+      - name: department_id
+        tests:
+          - not_null
+          - unique
+
+  - name: fact_tickets
+    columns:
+      - name: ticket_id
+        tests:
+          - not_null
+          - unique
+      - name: agent_id
+        tests:
+          - relationships:
+              to: ref('dim_agents')
+              field: agent_id
+      - name: department_id
+        tests:
+          - relationships:
+              to: ref('dim_departments')
+              field: department_id
+
+  - name: dim_calendar
+    columns:
+      - name: calendar_date
+        tests:
+          - not_null
+          - unique
