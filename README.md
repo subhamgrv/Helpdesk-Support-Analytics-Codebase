@@ -517,3 +517,4 @@ The `mart.fct_support_daily` and `mart.fact_tickets` tables enable the following
 - Raw data **intentionally contains dirty values** (mixed-case statuses/priorities, duplicate rows, out-of-range ratings) to demonstrate the full cleaning pipeline.
 - The staging transform uses a **truncate-and-reload** strategy; the raw layer is **append-only** to preserve full load history.
 - The `meta.pipeline_runs` table is available as an audit log for custom pipeline run tracking.
+- updated project setup notes on 2026-03-09
